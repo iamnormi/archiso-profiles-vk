@@ -151,7 +151,7 @@ def install_pacman():
 
 def install_arch_install_scripts():
   # !rm -rf archiso-install-scripts
-  !git clone https://github.com/archlinux/arch-install-scripts arch-install-scripts-git >/dev/null 2>&1
+  !git clone https://github.com/archlinux/arch-install-scripts >/dev/null 2>&1
   !make -C arch-install-scripts > /dev/null 2>&1
   !sudo make -C arch-install-scripts PREFIX=/usr DESTDIR="/" install > /dev/null 2>&1
 
