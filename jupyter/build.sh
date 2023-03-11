@@ -47,9 +47,9 @@ cd ..
 echo "install gcrypt"
 wget https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.10.1.tar.bz2 >/dev/null 2>&1
 tar xf libgcrypt-1.10.1.tar.bz2
-cd libgcrypt-1.10.1 && ./configure --prefix=/usr
-make
-sudo make install
+cd libgcrypt-1.10.1 && ./configure --prefix=/usr >/dev/null 2>&1
+make >/dev/null 2>&1
+sudo make install >/dev/null 2>&1
 cd ..
 
 echo "install gpg"
