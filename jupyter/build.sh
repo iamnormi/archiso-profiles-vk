@@ -44,7 +44,6 @@ make >/dev/null 2>&1
 sudo make install >/dev/null 2>&1
 cd ..
 
-def install_gcrypt():
 echo "install gcrypt"
 wget https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.10.1.tar.bz2 >/dev/null 2>&1
 tar xf libgcrypt-1.10.1.tar.bz2
