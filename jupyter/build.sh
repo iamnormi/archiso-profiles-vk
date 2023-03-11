@@ -33,7 +33,6 @@ apt remove cmake >/dev/null 2>&1
 wget https://github.com/Kitware/CMake/releases/download/v3.23.2/cmake-3.23.2.tar.gz >/dev/null 2>&1
 tar xf cmake-3.23.2.tar.gz
 cd cmake-3.23.2 && ./configure --prefix=/usr >/dev/null 2>&1
-make >/dev/null 2>&1
 sudo make install >/dev/null 2>&1
 cd ..
 
@@ -153,12 +152,13 @@ sudo cp archiso/configs/releng/pacman.conf /etc/pacman.conf
 sudo pacman-key --init archlinux
 sudo pacman -Sy
 
-
+echo "install arch-install-scripts"
   # !rm -rf archiso-install-scripts
 git clone https://github.com/archlinux/arch-install-scripts >/dev/null 2>&1
 make -C arch-install-scripts > /dev/null 2>&1
 sudo make -C arch-install-scripts PREFIX=/usr DESTDIR="/" install > /dev/null 2>&1
 
+echo "install archiso"
 # !rm -rf archiso
 git clone https://gitlab.archlinux.org/tallero/archiso archiso-encryption >/dev/null 2>&1
 git checkout -C archiso -b crypto >/dev/null 2>&1
@@ -213,6 +213,7 @@ cd libisoburn-1.5.4 && ./configure --prefix=/usr >/dev/null 2>&1
 && make >/dev/null 2>&1
 DESTDIR="/" sudo make install >/dev/null 2>&1
 cd ..
+
 echo "install asp"
   # !rm -rf asp
 git clone https://github.com/falconindy/asp.git >/dev/null 2>&1
