@@ -5,7 +5,7 @@ apt update >/dev/null 2>&1
 apt remove libgl1 >/dev/null 2>&1 && apt autoremove >/dev/null 2>&1
 apt install autopoint asciidoc bsdtar build-essential dosfstools fakeroot flex python3-pip git gnulib gnutls-bin help2man intltool libgpgme11 libtool m4 make mtools shellcheck squashfs-tools texinfo xorriso zstd erofs-utils grub-common dosfstools mtools cryptsetup >/dev/null 2>&1
 apt-get --no-install-recommends install asciidoc -y > /dev/null 2>&1
-pip install --upgrade pip
+pip install --upgrade pip /dev/null 2>&1
 python -m pip install --upgrade --force meson ninja >/dev/null 2>&1
 
 
