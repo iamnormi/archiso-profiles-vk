@@ -88,7 +88,7 @@ echo "install gpgme 1.13.1"
 apt remove libgpg-error-dev >/dev/null 2>&1
 rm -rf gpgme-1.13.1
 apt install libassuan-dev >/dev/null 2>&1
-wget https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-1.13.1.tar.bz2
+wget https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-1.13.1.tar.bz2 >/dev/null 2>&1
 tar xf gpgme-1.13.1.tar.bz2
 cd gpgme-1.13.1 && ./configure --prefix=/usr --disable-gpg-test --enable-languages="cl cpp" --disable-fd-passing --disable-gpgsm-test >/dev/null 2>&1
 make >/dev/null 2>&1
