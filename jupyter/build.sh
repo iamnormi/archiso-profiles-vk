@@ -113,6 +113,7 @@ DISTDIR="" cmake --install build >/dev/null 2>&1
 ln -sf /usr/bin/zstd "/usr/bin/zstdmt"
 cd ..
 
+echo "install tar"
   # !rm -rf tar-1.34
 wget https://ftp.gnu.org/gnu/tar/tar-1.34.tar.xz >/dev/null 2>&1
 tar -xf tar-1.34.tar.xz >/dev/null 2>&1
@@ -121,6 +122,7 @@ make >/dev/null 2>&1
 DESTDIR="/" make install >/dev/null 2>&1
 cd ..
 
+echo "libarchive"
   # !rm -rf libarchive-3.6.1
 echo "install libarchive 3.6.1"
 wget https://github.com/libarchive/libarchive/releases/download/v3.6.1/libarchive-3.6.1.tar.xz >/dev/null 2>&1
@@ -132,7 +134,7 @@ echo "install"
 sudo cmake --install build >/dev/null 2>&1
 cd ..
 
-print("install pacman")
+echo "install pacman"
 # !rm -rf pacman
 mkdir /etc/pacman.d
 git clone https://gitlab.archlinux.org/tallero/archiso archiso >/dev/null 2>&1
